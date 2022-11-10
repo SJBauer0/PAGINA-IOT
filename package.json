@@ -1,0 +1,24 @@
+{
+  "name": "pagina-iot",
+  "version": "1.0.0",
+  "description": "Pagina IOT",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SJBauer0/PaginaIOT.git"
+  },
+  "author": "Frida, Randu, Bauer, JP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SJBauer0/PaginaIOT/issues"
+  },
+  "homepage": "https://github.com/SJBauer0/PaginaIOT#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
