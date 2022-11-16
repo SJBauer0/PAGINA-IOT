@@ -1,0 +1,13 @@
+/*
+    $bg-color: #323643;
+    $lbg-color: #606470;
+    $primary-color: #93DEFF;
+    $white-color: #F7F7F7;
+*/
+body {
+    background-color: #323643;
+  }
+
+.display-1{
+    color: violet;
+}
