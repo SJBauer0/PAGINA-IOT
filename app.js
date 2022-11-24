@@ -1,6 +1,8 @@
 const express = require('express');
 const Swal = require('sweetalert2')
 const app = express();
+var livereload = require("livereload");
+var connectLiveReload = require("connect-livereload");
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -39,9 +41,20 @@ app.get('/login', (req, res)=>{
     res.render('login')
 })
 
-app.get('/info', (req, res)=>{
-    res.render('info')
-})
+//app.get('/info', (req, res)=>{
+//    res.render('info')
+//})
+
+app.get('/info', function (req, res) {
+    connection.query('SELECT * FROM datos ORDER BY FECHA', function (err, rows) {
+      if (err) {
+        req.flash('error', err)
+        res.render('info', { data: '' })
+      } else {
+        res.render('info', { data: rows })
+      }
+    })
+  })
 
 app.post('/register', async (req, res)=>{
     const user = req.body.user;
